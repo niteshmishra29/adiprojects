@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<script src="Scripts/angular.js"></script>
+
+<script src="Scripts/jquery-1.10.2.js"></script>
+<script src="LFiles/AngController.js"></script>
+<script src="LFiles/mycontroller.js"></script>
+<link href="Content/bootstrap.css" rel="stylesheet" />
+<script src="Scripts/bootstrap.js"></script>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+
+
+</head>
+<body ng-app="mymodule">
+    <div ng-controller="cnt">
+        <input type="button" ng-click="click()" value="Get Employee" />
+        <table border="1">
+            <tr ng-repeat="emp in collection">
+                <td>{{emp.FirstName}} {{emp.LastName}} </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

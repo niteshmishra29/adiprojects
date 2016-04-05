@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<script src="Scripts/angular.js"></script>
+<link href="Content/bootstrap.css" rel="stylesheet" />
+<script src="Scripts/jquery-1.10.2.js"></script>
+<script src="LFiles/mdContactMaster.js"></script>
+<script src="LFiles/contactContoller.js"></script>
+<script src="LFiles/loginContoler.js"></script>
+<script src="LFiles/serviceContact.js"></script>
+<a href="Partail/login.html">Partail/login.html</a>
+<script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+       // $("#contactview").hide();
+        $("#addblock").hide();
+        $("#new").click(function () { $("#addblock").show("slow"); });
+        $("#edit").click(function () {
+            $("#addblock").show();
+        });
+    })
+
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-lg-6"></div>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>Account Master</li>
+                        <li>Contact Master</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content" id="login">
+            <div class="row help-block">
+                <br />
+                <br />
+                <br />
+            </div>
+            <div>
+                <div ng-include="'Partail/login.html'"></div>
+            </div>
+            <div class="container row" ng-app="mdContactMaster" ng-controller="myControler" id="contact">
+
+                <div id="contactview">
+                    <div>
+                        <div><input type="button" id="new" value="New" ng-click="new(myname)" class="alert-info" /></div>
+                        <div class="row">
+                            <div class="col-md-6" id="addblock">
+                                <div class="row col-md-12">
+
+                                    <div class="help-block">
+                                        <input type="text" id="fname" ng-model="myname.FirstName" class="text-left">
+                                        First Name:{{myname.FirstName}}
+                                    </div>
+                                    <div class="help-block">
+                                        <input type="text" ng-model="myname.LastName" class="text-left" />
+                                        Last Name :{{myname.LastName}}
+                                    </div>
+                                    <div class="help-block">
+                                        <input type="text" ng-model="myname.Gender" class="text-left" required />
+                                        Gender:{{myname.Gender}}
+                                    </div>
+                                    <div class="help-block">
+                                        `
+                                        <b>Full Name:</b>{{myname.FirstName}}    {{myname.LastName}}
+                                    </div>
+                                    <div class="help-block">
+                                        <input type="button" id="save" value="Save" ng-click="save(myname)" class="alert-info" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="help-block">
+                                    Search
+                                    <input type="text" placeholder="Search Contact" ng-model="searchText.FirstName" class="text-left">
+                                    <input type="text" placeholder="Search Gender" ng-model="searchText.Gender" class="text-left">
+                                </div>
+                                <table class="table">
+                                    <tr>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Gender</th>
+                                        <th>Full Name</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr ng-repeat="emp in collectionemp | filter:searchText">
+                                        <td>{{emp.FirstName}}</td>
+                                        <td>{{emp.LastName}}</td>
+                                        <td>{{emp.Gender}}</td>
+                                        <td>{{emp.FirstName}} {{emp.LastName}}</td>
+                                        <td>
+                                            <input type="button" class="alert-danger" ng-click="edit(emp)" id="edit" value="Edit" />|
+                                            <input type="button" class="alert-danger" value="Delete" ng-click="delete(emp)" id="delete" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" ng-app="mdAccount" ng-controller="financeContoller" id="finance">
+
+            </div>
+            <div class="row" ng-app="mdAccount" ng-controller="financeContoller" id="month">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

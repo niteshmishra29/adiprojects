@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LerningAngularJS", "LerningAngularJS\LerningAngularJS.csproj", "{56541BD2-E830-4869-8F65-0B214EB6B1CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactAPIwithSecurity", "ContactAPIwithSecurity\ContactAPIwithSecurity.csproj", "{33A1A276-0E19-4359-B5F8-A6E8C159D3B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContactWithSecurity", "ContactWithSecurity\ContactWithSecurity.csproj", "{15E7047E-96FC-43E8-A175-07CD00963C30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56541BD2-E830-4869-8F65-0B214EB6B1CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56541BD2-E830-4869-8F65-0B214EB6B1CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56541BD2-E830-4869-8F65-0B214EB6B1CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56541BD2-E830-4869-8F65-0B214EB6B1CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A1A276-0E19-4359-B5F8-A6E8C159D3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A1A276-0E19-4359-B5F8-A6E8C159D3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A1A276-0E19-4359-B5F8-A6E8C159D3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A1A276-0E19-4359-B5F8-A6E8C159D3B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15E7047E-96FC-43E8-A175-07CD00963C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15E7047E-96FC-43E8-A175-07CD00963C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15E7047E-96FC-43E8-A175-07CD00963C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15E7047E-96FC-43E8-A175-07CD00963C30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
